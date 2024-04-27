@@ -19,8 +19,6 @@ def main():
         
         job_role = st.text_input("Enter Question", "")
         if len (job_role) > 0:
-            
-            st.markdown(model_call_suggest_job(text), unsafe_allow_html = True)
 
             st.markdown(model_call_critic(text, job_role), unsafe_allow_html = True)
 
