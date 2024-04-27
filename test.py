@@ -1,6 +1,6 @@
 import streamlit as st
 import pdfplumber
-from model import model_call_suggest_job, model_call_critic
+from model import model_call_critic
 
 
 def main():
