@@ -4,7 +4,7 @@ from model import model_call_suggest_job, model_call_critic
 
 
 def main():
-    st.title("Review Your Resume")
+    st.title("Ask Anything")
 
     # File uploader
     uploaded_file = st.file_uploader("upload", label_visibility = "hidden", type="pdf")
@@ -17,7 +17,7 @@ def main():
                 text += page.extract_text()
 
         
-        job_role = st.text_input("Profile you are applying for..", "")
+        job_role = st.text_input("Enter Question", "")
         if len (job_role) > 0:
             
             st.markdown(model_call_suggest_job(text), unsafe_allow_html = True)
